@@ -1,0 +1,41 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+x(t):=exp(-4*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ode: 'diff(y(t), t, 3) + 6*'diff(y(t), t,2) + 11*'diff(y(t),t)+6*y(t) = x(t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+atvalue(y(t), t=0, 1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+atvalue('diff(y(t), t), t= 0, -1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+atvalue('diff(y(t), t,2), t= 0, 1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lap_ode:laplace(ode,t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sol: solve(%, 'laplace(y(t), t, s));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Y(s):=(s^3+9*s^2+26*s+25)/(s^4+10*s^3+35*s^2+50*s+24);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ilt(Y(s),s,t);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

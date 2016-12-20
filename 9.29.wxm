@@ -1,0 +1,57 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+x(t):=exp(-t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+h(t):=exp(-2*t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+X(s):=laplace(x(t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+X(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+H(s):=laplace(h(t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+H(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Y(s):=X(s)*H(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Y(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+partfrac(Y(s),s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ilt(%o9,s,t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+assume(t>0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(h(r)*x(t-r),r,0,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o18 * integrate(exp(-r),r,0,t);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

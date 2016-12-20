@@ -1,0 +1,69 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+laplace(exp(-2*t)+exp(-3*t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+laplace(exp(-4*t)+exp(-5*t)*sin(5*t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+laplace(exp(2*t)+exp(3*t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+laplace(t*(exp(-2*t)+exp(2*t)),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+laplace(t*(exp(-2*t)-exp(2*t)),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+laplace(-t*exp(2*t),t,s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(exp(-s*t),t,0,1) + integrate(0*exp(-s*t),t,1,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(t*exp(-s*t),t,0,1) + integrate((2-t)*exp(-s*t),t,1,2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp((%o15) );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor((%o15) );
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+X(s):=16/((s+1+j)*(s+1-j));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+X(0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(X(0));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+cabs(%o26);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%o26=8;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
